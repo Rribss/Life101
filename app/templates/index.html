@@ -9,26 +9,35 @@
 		<title>TXT by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/static/assets/css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/assets/css/main.css"/>
 	</head>
 	<body class="homepage is-preload">
+		
+		
 		<div id="page-wrapper">
 
 			
 			<!-- Nav -->
 				<nav id="nav">
-					<ul>
-						<li class="current"><a href="index.html">Home</a></li>
-						<li>
-							<a href="#">Webpage Navigation</a>
-							<ul>
-								<li><a href="#blog" class="button scrolly">Take a look at what we offer</a></li>
+					<a href="index.html">Home</a>
+					<a href="#">Webpage Navigation</a>
+								<li><a href="#blog" class="button scrolly">Take a look at what we have to offer</a></li>
 								<li><a href="#features" class="button scrolly">Our Features</a></li>
 								<li><a href="#footer" class="button scrolly">What's this About?</a></li>
-							</ul>
-						</li>
-					</ul>
 				</nav>
+				<div class="login">
+					<a href="/signup">Create an account here!</a>
+					{% if 'username' not in session: %}
+						<form method='POST' action ='/login'>
+							<input id="userinfo" type='text' name='username' placeholder="Enter your name">
+							<input id="userpass" type='text' name='password' placeholder="Enter your password">
+							<input type='submit' value = 'Submit'>
+						</form>
+					{% else: %}
+						<p>You are logged in as {{session['username']}}</p>
+						<a href="/logout">Logout</a>
+					{% endif %}
+				</div>
 
 			<!-- Banner -->
 				<section id="banner">

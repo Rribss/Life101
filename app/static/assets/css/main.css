@@ -1,6 +1,6 @@
-@import url("fontawesome-all.min.css");
+/*@import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");
-
+*/
 /*
 	TXT by HTML5 UP
 	html5up.net | @ajlkn
@@ -12,8 +12,7 @@ iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
@@ -2342,6 +2341,26 @@ input, select, textarea {
 	body {
 		padding-top: 3.25em;
 	}
+	#login {
+		display: grid;
+		grid-template-columns: 50vw 50vw;
+		grid-template-rows: 1fr;
+		height: 100px;
+	}
+	input {
+		height: 200px;
+		width: 100%;
+	}
+	#userinfo {
+		display: block;
+		height: 30px;
+		width: 50%;
+	}
+	#userpass {
+		display: block;
+		heigth: 30px;
+		width: 50%;
+	}
 
 	#nav {
 		position: fixed;
@@ -2375,6 +2394,7 @@ input, select, textarea {
 			-o-transition: top .15s ease-in-out;
 			-ms-transition: top .15s ease-in-out;
 			transition: top .15s ease-in-out;
+			height: 1em;
 		}
 
 			#nav li > ul {
@@ -2402,19 +2422,25 @@ input, select, textarea {
 			}
 
 			#nav li:hover a, #nav li:hover span {
-				background: #C1CAC5;
+				background: #6b7770;
 				color: #fff;
 			}
 
 			#nav li.active a, #nav li.active span {
-				background: #C1CAC5;
+				background: #6b7770;
 				color: #fff;
 			}
 
-			#nav li.current a {
-				background: #b1ddab;
+			#nav li a {
+				background: #6b7770;
 				color: #fff;
 			}
+	input[type=text]{
+		height: 10px;
+		border-color: red;
+		border-width: 4em;
+		
+	}
 
 	.dropotron {
 		list-style: none;
@@ -2511,7 +2537,7 @@ input, select, textarea {
 				text-transform: uppercase;
 				font-size: 1.35em;
 				margin: 0 0 1.25em 0;
-				color: blue;
+				color: #fff;
 			}
 
 			#banner .content .button {
@@ -2982,7 +3008,7 @@ input, select, textarea {
 			input[type="reset"],
 			button,
 			.button {
-				display: block;
+				height: 30px;
 				width: 100%;
 			}
 
@@ -2991,7 +3017,7 @@ input, select, textarea {
 				input[type="reset"].large,
 				button.large,
 				.button.large {
-					font-size: 1.25em;
+					font-size: 0.75em;
 				}
 
 		/* Actions */
