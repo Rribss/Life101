@@ -2342,9 +2342,9 @@ input, select, textarea {
 		padding-top: 3.25em;
 	}
 	#login {
-		display: grid;
+		/*display: grid;
 		grid-template-columns: 50vw 50vw;
-		grid-template-rows: 1fr;
+		grid-template-rows: 1vw;*/
 		height: 100px;
 	}
 	input {
@@ -2353,13 +2353,13 @@ input, select, textarea {
 	}
 	#userinfo {
 		display: block;
-		height: 30px;
-		width: 50%;
+		height: 20px;
+		width: 50px;
 	}
 	#userpass {
 		display: block;
-		heigth: 30px;
-		width: 50%;
+		height: 20px;
+		width: 20px;
 	}
 
 	#nav {
@@ -2435,12 +2435,12 @@ input, select, textarea {
 				background: #6b7770;
 				color: #fff;
 			}
-	input[type=text]{
+	/*input[type=text]{
 		height: 10px;
 		border-color: red;
 		border-width: 4em;
 		
-	}
+	}*/
 
 	.dropotron {
 		list-style: none;
@@ -2743,7 +2743,7 @@ input, select, textarea {
 		/* Banner */
 
 			#banner {
-				padding: calc(14em + 44px) 0 14em 0;
+				padding: calc(0em) 0 0em 0;
 			}
 
 		/* Nav */
@@ -3074,7 +3074,7 @@ input, select, textarea {
 		/* Banner */
 
 			#banner {
-				padding: calc(6em + 44px) 0 6em 0;
+				padding: calc(0em) 0 0em 0;
 			}
 
 				#banner .content {
