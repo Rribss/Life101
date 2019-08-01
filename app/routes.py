@@ -38,6 +38,13 @@ def login():
         return "Enter a valid username/password"
 
 # CONNECT TO DB, ADD DATA
+@app.route('/submission', methods=["GET","POST"])
+def submission():
+    if request.method =="POST":
+        submission = mongo.db.submissions
+        submission.insert({'Problem':request.form['Problem']})
+        return redirect('/')
+    
 
 @app.route('/add')
 
@@ -67,4 +74,6 @@ def signup():
 def logout():
     session.clear()
     return redirect('/')
+    
+    
 
