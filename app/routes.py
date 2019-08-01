@@ -46,15 +46,10 @@ def submission():
         return redirect('/')
     
 
-@app.route('/add')
+@app.route('/articles')
 
-def add():
-    # connect to the database
-
-    # insert new data
-
-    # return a message to the user
-    return ""
+def articles():
+    return render_template("/articles.html")
     
 @app.route('/signup', methods=['GET','POST'])
 def signup():

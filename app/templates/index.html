@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>TXT by HTML5 UP</title>
+	<title>LIFE UP</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" type="text/css" href="/static/assets/css/main.css" />
@@ -60,9 +60,9 @@
 		.dropdown:hover .dropdown-content {
 			display: block;
 			width: 100%;
-			color: white; 
-			padding: 0em; 
-			text-decoration: none; 
+			color: white;
+			padding: 0em;
+			text-decoration: none;
 		}
 
 		/* Change the background color of the dropdown button when the dropdown content is shown */
@@ -82,6 +82,8 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
+
+				<li><a href="/">Home</a></li>
 				<li>
 					<a href="#">Webpage Navigation</a>
 					<ul>
@@ -90,21 +92,22 @@
 						<li><a href="#footer" class="button scrolly" style="  color: white;">What's this About?</a></li>
 					</ul>
 				</li>
+				<li><a href="/articles">Articles</a></li>
 				<li><a href="/signup">Create an Account</a></li>
 				<li>
 					<div class="dropdown">
 						<span class="dropbtn" style="color: white">Account Login/Logout</span>
 						<div class="dropdown-content">
-									{% if 'username' not in session: %}
-									
-									<form method='POST' action='/login'>
-										<a style="background-color: none; color: white; padding: 0em; text-decoration: none; display: block; width: 100%;"href="#"><input type='text' name='username' placeholder="Enter your username" style="height: 35px;" ></a>
-										<a style="background-color: none; color: white; padding: 0em; text-decoration: none; display: block; width: 100%;"href="#"><input type='text' name='password' placeholder="Enter your password" style="height: 35px;" ></a>
-										<input type='submit' value='Submit' style="background-color: none; color: white; padding: 0em; text-decoration: none; display: block; height: 10%; width: 100%;"href="#">
-									</form>
-									{% else: %}
-									<h6 style="color: white;">You are logged in as {{session['username']}}</h6>
-									<a href="/logout">Logout</a> {% endif %}
+							{% if 'username' not in session: %}
+
+							<form method='POST' action='/login'>
+								<a style="background-color: none; color: white; padding: 0em; text-decoration: none; display: block; width: 100%;" href="#"><input type='text' name='username' placeholder="Enter your username" style="height: 35px;" ></a>
+								<a style="background-color: none; color: white; padding: 0em; text-decoration: none; display: block; width: 100%;" href="#"><input type='text' name='password' placeholder="Enter your password" style="height: 35px;" ></a>
+								<input type='submit' value='Submit' style="background-color: none; color: white; padding: 0em; text-decoration: none; display: block; height: 10%; width: 100%;" href="#">
+							</form>
+							{% else: %}
+							<h6 style="color: white;">You are logged in as {{session['username']}}</h6>
+							<a href="/logout">Logout</a> {% endif %}
 						</div>
 					</div>
 				</li>
@@ -151,10 +154,9 @@
 								<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
 								<p>
 									One of the prime regrets senior citizens have today is that they had not taken care of their body, or had not felt the best they could in their ages of youth. Thus, it is imperative that one keeps their mind and body strong and healthy, maintaining a
-									vessel that is still able-bodied by the time the wrinkles you kept denying have finally fully shown themselves While physical fitness is simple, yet can be difficult to sustain, optimizing your mindset could be hard, depending on how you're looking
-									at the world right now...
+									vessel that is still able-bodied by the time the wrinkles you kept denying have finally fully shown themselves. While physical fitness is simple, yet can be difficult to sustain, optimizing your mindset and sustaining your mental health can be hard, as everyone's case is different. Come take a look at our articles to get started!
 								</p>
-								<a href="#" class="button">Continue Reading</a>
+								<a href="/articles" class="button">Continue Reading</a>
 							</article>
 
 						</div>
@@ -208,10 +210,12 @@
 							<a href="#" class="button alt">Article Gallery</a>
 							<br>
 							<ul class="actions" text-align: center;>
-								<li><form method='POST' action='/submission'>
-										<input type='text' name='Problem' placeholder="Enter your problem" class="button alt" style=" position: relative; float: left; height: 50px;" ></a>
-										<input type='submit' value='Submit' style="background-color: none; color: white; padding: 0em; text-decoration: none; display: block; height: 10%; width: 100%;"href="#">
-									</form></li>
+								<li>
+									<form method='POST' action='/submission'>
+										<input type='text' name='Problem' placeholder="Enter your problem" class="button alt" style=" position: relative; float: left; height: 50px;"></a>
+										<input type='submit' value='Submit' style="background-color: none; color: white; padding: 0em; text-decoration: none; display: block; height: 10%; width: 100%;" href="#">
+									</form>
+								</li>
 							</ul>
 						</div>
 					</div>
