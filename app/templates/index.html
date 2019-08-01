@@ -11,6 +11,66 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" type="text/css" href="/static/assets/css/main.css" />
+	<style>
+		/* Style The Dropdown Button */
+
+		.dropbtn {
+			background-color: #6b7770;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+
+		/* The container <div> - needed to position the dropdown content */
+
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		/* Dropdown Content (Hidden by Default) */
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #6b7770;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+
+		/* Links inside the dropdown */
+
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		/* Change color of dropdown links on hover 
+
+		.dropdown-content a:hover {
+			background-color: #f1f1f1
+		}
+
+		/* Show the dropdown menu on hover */
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+			width: 100%;
+			color: white; 
+			padding: 0em; 
+			text-decoration: none; 
+		}
+
+		/* Change the background color of the dropdown button when the dropdown content is shown */
+
+		.dropdown:hover .dropbtn {
+			background-color: #3e8e41;
+		}
+	</style>
 </head>
 
 <body class="homepage is-preload">
@@ -22,30 +82,33 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul>
-			<!--	<li><a href="index.html">Home</a></li>
 				<li>
 					<a href="#">Webpage Navigation</a>
 					<ul>
-						<li><a href="#blog" class="button scrolly">Take a look at what we have to offer</a></li>
-						<li><a href="#features" class="button scrolly">Our Features</a></li>
-						<li><a href="#footer" class="button scrolly">What's this About?</a></li>
+						<li><a href="#blog" class="button scrolly" style=" color: white;">Take a look at what we have to offer</a></li>
+						<li><a href="#features" class="button scrolly" style=" color: white;">Our Features</a></li>
+						<li><a href="#footer" class="button scrolly" style="  color: white;">What's this About?</a></li>
 					</ul>
 				</li>
-				<li><a href="/signup">Create an account here!</a></li>-->
-						<li><div class="login">
-						
-						{% if 'username' not in session: %}
-							<form method='POST' action ='/login'>
-								<input style="width: "type='text' name='username' placeholder="Enter your username">
-								<input id="userinfo" type='text' name='password' placeholder="Enter your password">
-								<input id="userinfo" type='submit' value = 'Submit'>
-							</form>
-						{% else: %}
-							<p>You are logged in as {{session['username']}}</p>
-							<a href="/logout">Logout</a>
-						{% endif %}
+				<li><a href="/signup">Create an Account</a></li>
+				<li>
+					<div class="dropdown">
+						<span class="dropbtn" style="color: white">Account Login/Logout</span>
+						<div class="dropdown-content">
+									{% if 'username' not in session: %}
+									
+									<form method='POST' action='/login'>
+										<a style="background-color: none; color: white; padding: 0em; text-decoration: none; display: block; width: 100%;"href="#"><input type='text' name='username' placeholder="Enter your username" style="height: 35px;" ></a>
+										<a style="background-color: none; color: white; padding: 0em; text-decoration: none; display: block; width: 100%;"href="#"><input type='text' name='password' placeholder="Enter your password" style="height: 35px;" ></a>
+										<input type='submit' value='Submit' style="background-color: none; color: white; padding: 0em; text-decoration: none; display: block; height: 10%; width: 100%;"href="#">
+									</form>
+									{% else: %}
+									<h6 style="color: white;">You are logged in as {{session['username']}}</h6>
+									<a href="/logout">Logout</a> {% endif %}
+						</div>
 					</div>
-					</li>
+				</li>
+
 			</ul>
 		</nav>
 		<!-- Banner -->
@@ -70,7 +133,7 @@
 		</section>
 		<!-- Blog -->
 		<section id="blog">
-			<h2 class="major"><span>Take a look at what we offer</span></h2>
+			<h2 class="major"><span>Take a look at what we have to offer</span></h2>
 			<div>
 				<div class="row">
 					<div class="col-9 col-12-medium">
