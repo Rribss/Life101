@@ -2482,6 +2482,20 @@ body {
 		grid-template-rows: 1vw;
 		height: 100px;
 	}*/
+.grid-container {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 20% 20% 20% 20% 20%;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+#item1 {
+	grid-columns: 25%, 75%;
+}
+#item2 {
+	grid-columns: 50% 125%;
+	grid-rows: 0% 60%
+}
 
 input {
 /*	height: 100%;*/
@@ -2552,7 +2566,7 @@ input {
 	text-decoration: none;
 	color: #6b7770;
 	top: -6px;
-	padding: 6px 1.5em 0.115em 1.5em;
+	padding: 6px .5em 0.115em .5em;
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
 	outline: 0;
