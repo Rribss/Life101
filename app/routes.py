@@ -71,4 +71,14 @@ def logout():
     return redirect('/')
     
     
+@app.route('/bipolar')
+def bipolar():
+    return render_template("/bipolar.html")
 
+@app.route('/features')
+def features():
+    return render_template("/featurepage.html")
+    
+@app.route('/ocd')
+def ocd():
+    return render_template('ocd.html')
